@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Quicksand:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    background-color: #E8F9FD;
+}
+
+.konten{
+    margin-top: 15%;
+}
+
+
+#beranda{
+    margin: auto;
+    width: 100%;
+    display: flex;
+}
+
+.imageDump{
+    flex-grow: 1;
+}
+
+#beranda img{
+    width: 100%;
+}
+
+.berandaDalem{
+    flex-grow: 1;
+    padding-left: 100px;
+    padding-right: 30px;
+}
+
+.berandaDalem h1{
+    width: 100%;
+    font-size: 450%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: -10px;
+}
+
+
+.berandaDalem p{
+    font-size: 3vw;
+    padding-right: 20%; 
+} 
+
+
+.berandaDalem div{
+    background-color: #0AA1DD;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    color: white; 
+}
+
+#Fitur{
+    margin: auto;
+    margin-top: 15%;
+    width: 100%;
+    /* background-color: bisque; */
+    overflow: auto;
+}
+
+
+#Fitur h1{
+    font-size: 450%;
+    margin-bottom: 15%;
+    text-align: center;
+    /* background-color: aquamarine; */
+    width: 75%;
+    margin: auto;
+}
+
+#isiFitur{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    /* background-color: darkcyan; */
+}
+
+.card img{
+    width: 65%;
+}
+
+.card{
+    flex-grow: 1;
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+    background-color: #DCF7FB;
+    text-align: center;
+    box-shadow: -7px 26px 17px 0px rgba(0,220,247,0.14);
+}
+
+.card .gambar{
+    margin: auto;
+    width: 100%;
+    /* background-color: black; */
+    
+}
+
+aside{
+    /* background-color: bisque; */
+    margin: auto;
+    margin-top: 15%;
+    width: 50%;
+    text-align: center;
+}
+
+aside h1{
+    font-size: 450%;
+}
+
+aside h2{
+    font-size: 310%;
+    font-weight: 300;
+}
+
+aside a img{
+    margin-top: -100px;
+}
+
+section table tr{
+    font-size: larger;
+}
+
+/* header{
+    background-color: #79DAE8;
+    padding: 0.05%;
+    width: 100%;
+}
+
+
+
+
+header ul li{
+    display: inline-block;
+    margin-right: 40px;
+    padding: 0.3%;
+    width: 15%;
+    text-align: center;
+    list-style: none;
+    border-radius: 10px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+} */
+
+footer{
+    background-color: #79DAE8;
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10%;
+    font-size: 2vw;
+}
+
+
+.berandaDalem div:hover{
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+    color: black;
+    cursor: pointer;
+}
+/* 
+nav ul li:hover{
+    background-color: #E8F9FD;
+}
+
+nav ul li a:hover{
+    color: black;
+} */
+
+.card:hover{
+    box-shadow: none;
+    position: relative;
+    top: -20px;
+}
+
+nav{
+    background-color: #79DAE8;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .mainMenu{
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a{
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.5rem;
+}
+
+nav .mainMenu li a:hover{
+    background: whitesmoke;
+}
+
+nav .openMenu{
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .closeMenu, .icons i{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-tiktok:hover{
+    color: red; 
+}
+.fa-instagram:hover{
+    color: fuchsia;
+}
+.fa-twitter:hover{
+    color: lightseagreen;
+}
+.fa-github:hover{
+    color: coral;
+}
+
+nav .logo{
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media(max-width: 800px){
+    nav .mainMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #79DAE8;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .mainMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+    nav .mainMenu li a:hover{
+        background: none;
+        color: black;
+        font-size: 1.6rem;
+    }
+
+    .icons i{
+        display: inline-block;
+        padding: 12px;
+    }
+}
+
+
+
+
+
+
+
+

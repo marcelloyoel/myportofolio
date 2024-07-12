@@ -1,0 +1,520 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+.logo > a > img {
+    width: 4rem;
+    height: 4rem;
+}
+
+nav{
+    background: lightgrey;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav .logo{
+    float: left;
+    padding-left: 60px;
+}
+
+nav::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+    margin-left: auto;
+}
+
+nav ul li{
+    float: left;
+    display: block;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 9px 15px;
+}
+
+nav ul li a:hover{
+    background: #1b1b1b;
+    color: orange;
+    border-radius: 5px;
+    box-shadow: 0 0 5px orange,
+                0 0 5px orange;
+}
+
+nav ul ul li a:hover{
+    color: orange;
+    box-shadow: none;
+    background: none;
+}
+
+nav ul ul{
+    background: lightgrey;
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid orange;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+    z-index: 1;
+}
+
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li{
+    position: relative;
+    margin: 0;
+    width: 150px;
+    float: none;
+    display: list-item;
+}
+
+nav ul ul li a{
+    line-height: 50px;
+    display: block;
+}
+
+nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+.fa-plus{
+    margin-left: 48px;
+    font-size: 15px;
+}
+
+.show, .icon, input{
+    display: none;
+}
+
+.title {
+    text-align: center;
+}
+
+.title-name {
+    background-color: grey;
+    padding: 6rem 0rem 2rem 0rem;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.content {
+    padding: 3rem;
+}
+.img {
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    text-align: center;
+    padding: 0rem 0rem 2.5rem 0rem;
+}
+.type {
+    padding: .5rem 0rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.image {
+    padding: 0rem .8rem;
+}
+
+.background-image {
+    box-shadow: 15px 11px 20px rgb(82, 82, 82);
+    width: 17rem;
+    height: 16rem;
+    text-align: center;
+}
+
+.price {
+    box-shadow: 15px 11px 20px rgb(82, 82, 82);
+    margin-top: 1.2rem;
+    font-weight: bold;
+}
+
+.price > a {
+    background-color:orange;
+    padding: .5rem 0rem;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    height: 2rem;
+    margin: -0.5rem 0rem;
+    font-size: 1.8rem;
+}
+
+.price > a:hover {
+    background-color: rgb(255, 182, 46);
+    padding: .5rem 0rem;
+    font-size: 0;
+    text-align: center;
+    display: block;
+    height: 2rem;
+    margin: -0.5rem 0rem;
+}
+
+.price > a:hover:after {
+    content: attr(data-hover);
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.background-image > img {
+    width: 13rem;
+    /* height: 3rem; */
+}
+
+.partnership {
+    width: 100%;
+}
+
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 2rem;
+}
+
+.brand {
+    display: flex;
+    height: 5rem;
+}
+
+.faq a {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    font-size: 4rem;
+    margin: 0rem 37rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0rem 1rem;
+    margin-top: 0.3rem;
+    display: block;
+    text-decoration: none;
+}
+
+.faq a:hover {
+    color: white;
+}
+
+.social-media {
+    padding: 3rem 0 1rem 0;
+    text-align: center;
+}
+
+.cr {
+    text-align: center;
+}
+
+/* tablet */
+
+@media screen and (max-width:768px){
+    
+    body {
+        overflow-x: hidden;
+    }
+    nav ul{
+        margin-right: 0px;
+        float: left;
+    }
+
+    nav .logo{
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    nav ul li, nav ul ul li{
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul{
+        top: 70px;
+        position: static;
+        border-top: none;
+        float:none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul ul ul li{
+        position: static;
+
+    }
+
+    nav ul ul li{
+        border-bottom: 0px;
+    }
+    nav ul ul li a:hover{
+        color: orange;
+    }
+    nav ul ul a{
+        padding-left: 40px;
+    }
+
+    .show{
+        display: block;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+
+    .show:hover{
+        color: orange;
+        border-radius: 5px;
+    }
+
+    .icon{
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav ul li a:hover{
+        color: orange;
+        box-shadow: none;
+        background: none;
+    }
+
+    .show + a, ul{
+        display: none;
+    }
+
+    [id^=btn]:checked + ul{
+        display: block;
+    }
+
+    .content {
+        padding: 3rem;
+    }
+    .img {
+        display: block;
+        justify-content: center;
+        padding: 4rem;
+    }
+    
+    h1 {
+        /* text-align: center; */
+        padding: 0rem 0rem 2.5rem 0rem;
+    }
+    
+    .type {
+        padding: .5rem 0rem;
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    .image {
+        padding: 2rem 2.5rem;
+    }
+    
+    .background-image {
+        box-shadow: 15px 11px 20px rgb(82, 82, 82);
+        width: 27rem;
+        height: 26rem;
+        text-align: center;
+    }
+    
+    .price {
+        box-shadow: 15px 11px 20px rgb(82, 82, 82);
+        width: 27rem;
+        margin-top: 2rem;
+        font-weight: bold;
+    }
+    
+    .price > a {
+        background-color:orange;
+        padding: .5rem 0rem;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: #000;
+        height: 3rem;
+        width: 27rem;
+        margin: -0.5rem 0rem;
+        font-size: 2.5rem;
+    }
+    
+    .price > a:hover {
+        background-color: rgb(255, 182, 46);
+        padding: .5rem 0rem;
+        font-size: 0;
+        text-align: center;
+        display: block;
+        width: 27rem;
+        height: 3rem;
+        margin: -0.5rem 0rem;
+    }
+    
+    .price > a:hover:after {
+        content: attr(data-hover);
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: #000;
+       
+    }
+    
+    .background-image > img {
+        width: 20rem;
+    }
+    .brand {
+        display: flex;
+        height: 3.5rem;
+    }
+
+    .faq a {
+        background-color: orange;
+        color: black;
+        font-weight: bold;
+        font-size: 4rem;
+        margin: 0rem 2rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        padding: 0rem 1rem;
+        margin-top: 0.3rem;
+        display: block;
+        text-decoration: none;
+    }
+    
+    .faq a:hover {
+        color: white;
+    }
+}
+
+/* hp */
+
+@media screen and (max-width:576px){
+    body {
+        overflow-x: hidden;
+    }
+    
+    .content {
+        padding: 1rem;
+    }
+    .img {
+        display: block;
+        justify-content: center;
+        padding: 4rem;
+    }
+    
+    h1 {
+        /* text-align: center; */
+        padding: 0rem 0rem 1rem 0rem;
+    }
+    
+    .type {
+        padding: .5rem 0rem;
+        font-weight: bold;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    .image {
+        padding: 2rem 2.5rem;
+    }
+    
+    .background-image {
+        box-shadow: 15px 11px 20px rgb(82, 82, 82);
+        width: 17rem;
+        height: 16rem;
+        text-align: center;
+    }
+    
+    .price {
+        box-shadow: 15px 11px 20px rgb(82, 82, 82);
+        width: 17rem;
+        margin-top: 2rem;
+        font-weight: bold;
+    }
+    
+    .price > a {
+        background-color:orange;
+        padding: .5rem 0rem;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: #000;
+        height: 2rem;
+        width: 17rem;
+        margin: -0.5rem 0rem;
+        font-size: 2rem;
+    }
+    
+    .price > a:hover {
+        background-color: rgb(255, 182, 46);
+        padding: .5rem 0rem;
+        font-size: 0;
+        text-align: center;
+        display: block;
+        width: 17rem;
+        height: 2rem;
+        margin: -0.5rem 0rem;
+    }
+    
+    .price > a:hover:after {
+        content: attr(data-hover);
+        font-weight: bold;
+        font-size: 2rem;
+        color: #000;
+       
+    }
+    
+    .background-image > img {
+        width: 13rem;
+    }
+
+    .brand {
+        display: flex;
+        height: 2.3rem;
+    }
+
+    .faq a {
+        background-color: orange;
+        color: black;
+        font-weight: bold;
+        font-size: 3rem;
+        margin: 0rem 4rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        padding: 0rem 1rem;
+        margin-top: 0.3rem;
+        display: block;
+        text-decoration: none;
+    }
+    
+    .faq a:hover {
+        color: white;
+    }
+}
